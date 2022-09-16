@@ -1,6 +1,48 @@
 <head>
-
+    <style>
+        @media all and (min-width: 1051px) {
+            :root {
+                --section-width: 35vw;
+            }
+        }
+        @media all and (min-width: 576px) and (max-width: 1050px) {
+            :root {
+                --section-width: 55vw;
+            }
+        }
+        @media all and (max-width: 575px) {
+            :root {
+                --section-width: 70vw;
+            }
+        }
+        body {background-color: #404040; text-align: center;}
+        .banner {position:fixed; width: 100vw; background-color: #666666; text-align: center; left: 0px; top: 25px;}
+        .section {position: relative; display: inline-block; width: var(--section-width); background-color: #8c8c8c; margin: 20px;}
+        .main {position: fixed; left: 0px; top: 125px; width: 100vw;}
+    </style>
 </head>
 <body>
-    <h1>test</h1>
+    <div class="banner"><h1>Matthew Oley</h1></div>
+    <div class="main">
+        <div class="section">
+            <h2>Summary</h2>
+            <p>test</p>
+        </div><br>
+        <div class="section">
+            <img src="picture.png" style="padding: 25px;">
+        </div><br>
+        <div class="section">
+            <p><a href="https://www.rit.edu/computing/department-software-engineering">SE Website</a></p>
+        </div><br>
+        <div class="section">
+            <h2>bulletpoints</h2>
+            <div style="display: inline-block;">
+                <ul>
+                    <li>test</li>
+                </ul>
+            </div>
+        </div><br>
+    </div>
+    
+    
 </body>
