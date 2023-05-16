@@ -1,55 +1,40 @@
-<head>
-    <style>
-        @media all and (min-width: 1051px) {
-            :root {
-                --section-width: 35vw;
-            }
-        }
-        @media all and (min-width: 576px) and (max-width: 1050px) {
-            :root {
-                --section-width: 55vw;
-            }
-        }
-        @media all and (max-width: 575px) {
-            :root {
-                --section-width: 70vw;
-            }
-        }
-        body {background-color: #404040; text-align: center;}
-        .banner {position:fixed; width: 100vw; background-color: #666666; text-align: center; left: 0px; top: 25px;}
-        .section {position: relative; display: inline-block; width: var(--section-width); background-color: #8c8c8c; margin: 20px;}
-        .main {position: fixed; left: 0px; top: 125px; width: 100vw;}
-    </style>
-</head>
-<body>
-    <div class="banner"><h1>Matthew Oley</h1></div>
-    <div class="main">
-        <div class="section">
-            <h2>Summary</h2>
-            <p style="margin: 0px 10px 10px 10px;">
-                My name is Matthew Oley, I attended Dallas High School in Dallas, Pennslvania. I am studying software engineering at the Rochester Institute of Technology.
-                My favorite color is purple, a have never had a pet and I havn't done sports since middle school. I qualified for regional chorus in Pennslvania my senior year and I was a captain of high brass in my high school's marching band.
-                I like to go backpacking and enjoy nature and I like to write code and poetry.
-            </p>
-        </div><br>
-        <div class="section">
-            <img src="picture.png" style="padding: 25px;">
-        </div><br>
-        <div class="section">
-            <p><a href="https://www.rit.edu/computing/department-software-engineering">SE Website</a></p>
-        </div><br>
-        <div class="section">
-            <h2>Why SE?</h2>
-            <div style="display: inline-block; margin: 0px 0px 10px 0px">
-                <ul style="text-align: left; margin: 0px;">
-                    <li>Enjoy coding</li>
-                    <li>Enjoy problem solving</li>
-                    <li>Want to "hack the planet"</li>
-                    <li>Money</li>
-                </ul>
+<html>
+    <head>
+        <title>Matthew Oley</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="main.js"></script>
+    </head>
+    <body style="position: relative;">
+        <div class="navbar">
+            <div class="navbar_left_info">
+                <a name="github link" target="_blank" href="https://github.com/mroley1">
+                    <div class="navbar_social_button">
+                        <img id="githubLink" src="./assets/social_svgs/github_default.svg">
+                    </div>
+                </a>
+                <a name="github link" target="_blank" href="https://www.linkedin.com/in/matthew-oley-756404248/">
+                    <div class="navbar_social_button">
+                        <img id="linkedinLink" src="./assets/social_svgs/linkedin_default.svg">
+                    </div>
+                </a>
             </div>
-        </div><br>
-    </div>
-    
-    
-</body>
+            <a><div class="navbar_center_option"><span class="navbar_text">Bio</span></div></a>
+            <a><div class="navbar_center_option"><span class="navbar_text">Education</span></div></a>
+            <a><div class="navbar_center_option"><span class="navbar_text">Skills</span></div></a>
+            <a><div class="navbar_center_option"><span class="navbar_text">Projects</span></div></a>
+            <div class="navbar_right_info"><a href="mailto:oleymr22@gmail.com">oleymr22@gmail.com</a></div>
+        </div>
+        <div class="main">
+            <div style="width: 100%;">
+                <div class="bio_card">
+                    <picture>
+                        <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
+                        <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
+                        <img src="./assets/Oley_Matthew_profile.png" class="bio_profile_picture">
+                    </picture>
+                    <h1 class="bio_name">Matthew Oley</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
