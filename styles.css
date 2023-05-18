@@ -11,6 +11,10 @@
     --navbar-font-size: 18pt;
 }
 
+.summary_list[data-icon=location]::marker {content: url(assets/list_pngs/location.png);}
+.summary_list[data-icon=school]::marker {content: url(assets/list_pngs/school.png);}
+.summary_list[data-icon=gpa]::marker {content: url(assets/list_pngs/gpa.png);}
+
 
 body {background-color: rgb(93, 93, 172); margin: 0px;}
 
@@ -28,17 +32,17 @@ body {background-color: rgb(93, 93, 172); margin: 0px;}
 
 .main {position: absolute; top: 3rem; height: calc(100% - 3rem); width: 100%;}
 
-.bio_card {display: flex; position: absolute; width: 80%; left: 10%; border-radius: 25px; background-color: rgba(255, 255, 255, 0.377); margin: 50px 0px 50px 0px; flex-wrap: wrap; flex-direction: row;}
-.bio_profile_picture {border-radius: 100%; aspect-ratio: 1; margin: 15px;}
-.bio_name {font-family: Merriweather;}
+.summary_card {display: flex;position: absolute;width: 80%;left: 10%;border-radius: 25px;background-color: rgba(255, 255, 255, 0.377);margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;}
+.summary_profile_picture {border-radius: 100%; aspect-ratio: 1;}
+.summary_name {font-family: Merriweather; position: relative; left: 30px; margin-block-start: 0.30em;}
+.summary_body {font-family: Merriweather; position: relative; left: 80px; width: calc(100% - 80px);}
+.summary_list {font-size: 30pt; padding-left: 15px; margin-top: 10px;}
 @media (min-width: 935px) {
-    .bio_card {height: 600px;}
-    .bio_profile_picture {width: 300px;}
-    .bio_name {font-size: 40pt;}
+    .summary_profile_picture {width: 300px; height: 300px;}
+    .summary_name {font-size: 60pt;}
 }
 @media (max-width: 935px) {
-    .bio_card {height: 300px;}
-    .bio_profile_picture {width: 150px;}
-    .bio_name {font-size: 20pt;}
+    .summary_profile_picture {width: 150px; height: 150px;}
+    .summary_name {font-size: 30pt;}
 }
 

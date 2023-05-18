@@ -1,6 +1,6 @@
 
 
-let socialButtons = document.querySelector(".navbar_left_info").children // get list of social button integrated
+let socialButtons = document.querySelector(".navbar_left_info").children // get list of social buttons integrated
 for (i = 0; i < socialButtons.length; i++) {
     // loop through each button
     let button = socialButtons[i].querySelector(".navbar_social_button");

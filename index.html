@@ -5,7 +5,29 @@
         <script defer src="main.js"></script>
     </head>
     <body style="position: relative;">
+        <div class="main">
+            <div style="width: 100%;">
+                <div class="summary_card">
+                    <picture>
+                        <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
+                        <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
+                        <img src="./assets/Oley_Matthew_profile.png" class="summary_profile_picture">
+                    </picture>
+                    <div style="width: calc(100% - 300px);">
+                        <h1 class="summary_name">Matthew Oley</h1>
+                        <div class="summary_body">
+                            <ul>
+                                <li data-icon="location" class="summary_list">Dallas, Pennslvania</li>
+                                <li data-icon="school" class="summary_list">Rochester Institute of Technology</li>
+                                <li data-icon="gpa" class="summary_list">3.85 GPA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="navbar">
+            <!--beginning-->
             <div class="navbar_left_info">
                 <a name="github link" target="_blank" href="https://github.com/mroley1">
                     <div class="navbar_social_button">
@@ -18,23 +40,13 @@
                     </div>
                 </a>
             </div>
-            <a><div class="navbar_center_option"><span class="navbar_text">Bio</span></div></a>
+            <!--middle-->
+            <a><div class="navbar_center_option"><span class="navbar_text">Summary</span></div></a>
             <a><div class="navbar_center_option"><span class="navbar_text">Education</span></div></a>
             <a><div class="navbar_center_option"><span class="navbar_text">Skills</span></div></a>
             <a><div class="navbar_center_option"><span class="navbar_text">Projects</span></div></a>
+            <!--end-->
             <div class="navbar_right_info"><a href="mailto:oleymr22@gmail.com">oleymr22@gmail.com</a></div>
-        </div>
-        <div class="main">
-            <div style="width: 100%;">
-                <div class="bio_card">
-                    <picture>
-                        <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
-                        <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
-                        <img src="./assets/Oley_Matthew_profile.png" class="bio_profile_picture">
-                    </picture>
-                    <h1 class="bio_name">Matthew Oley</h1>
-                </div>
-            </div>
         </div>
     </body>
 </html>
