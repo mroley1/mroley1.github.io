@@ -1,30 +1,78 @@
 <html>
     <head>
         <title>Matthew Oley</title>
-        <link rel="stylesheet" href="styles.css">
-        <script defer src="main.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+        <script defer src="./main.js"></script>
     </head>
     <body style="position: relative;">
         <div class="main">
-            <div style="width: 100%;">
-                <div class="summary_card">
+            <div id="summary" style="width: 100%; background-color: var(--main-colors-1);">
+                <div class="card">
                     <picture>
                         <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
                         <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
-                        <img src="./assets/Oley_Matthew_profile.png" class="summary_profile_picture">
+                        <img src="./assets/Oley_Matthew_profile.png" class="circle_picture">
                     </picture>
                     <div style="width: calc(100% - 300px);">
-                        <h1 class="summary_name">Matthew Oley</h1>
-                        <div class="summary_body">
+                        <h1 class="name">Matthew Oley</h1>
+                        <div class="body">
                             <ul>
-                                <li data-icon="location" class="summary_list">Dallas, Pennslvania</li>
-                                <li data-icon="school" class="summary_list">Rochester Institute of Technology</li>
-                                <li data-icon="gpa" class="summary_list">3.85 GPA</li>
+                                <li data-icon="location" class="list">Dallas, Pennslvania</li>
+                                <li data-icon="school" class="list">RIT (BS Software Engineering)</li>
+                                <li data-icon="gpa" class="list">3.85 GPA</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <canvas data-divider-after="1" class="divider" width="1000" height="100"></canvas>
+            <div id="education" style="width: 100%; background-color: var(--main-colors-2);">
+                <div class="card">
+                    <div style="width: 100%; display: flex; flex-direction: row;">
+                        <div class="body_wrapper">
+                            <h1 class="name_calm">Rochester Institute of Technology</h1>
+                            <div class="body">
+                                <ul>
+                                    <li data-icon="location" class="list list_calm">Henrietta, New York</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <picture>
+                            <source srcset="./assets/RIT.webp" type="image/webp">
+                            <source srcset="./assets/RIT.png" type="image/png">
+                            <img src="./assets/RIT.png" class="circle_picture">
+                        </picture>
+                    </div>
+                    <div style="width: 100%; display: flex; flex-direction: row;">
+                        <div class="body_wrapper">
+                            <h1 class="name_calm">Dallas High School</h1>
+                            <div class="body">
+                                <ul>
+                                    <li data-icon="location" class="list list_calm">Dallas, Pennslvania</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <picture>
+                            <source srcset="./assets/dallas.webp" type="image/webp">
+                            <source srcset="./assets/dallas.png" type="image/png">
+                            <img src="./assets/dallas.png" class="circle_picture">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <canvas data-divider-after="2" class="divider" width="1000" height="100"></canvas>
+            <div id="skills" style="width: 100%; background-color: var(--main-colors-3);">
+                <div class="card">
+                    
+                </div>
+            </div>
+            <canvas data-divider-after="3" class="divider" width="1000" height="100"></canvas>
+            <div id="projects" style="width: 100%; background-color: var(--main-colors-4);">
+                <div class="card">
+                    
+                </div>
+            </div>
+            <canvas data-divider-after="4" class="divider" width="1000" height="100"></canvas>
         </div>
         <div class="navbar">
             <!--beginning-->
@@ -41,10 +89,10 @@
                 </a>
             </div>
             <!--middle-->
-            <a><div class="navbar_center_option"><span class="navbar_text">Summary</span></div></a>
-            <a><div class="navbar_center_option"><span class="navbar_text">Education</span></div></a>
-            <a><div class="navbar_center_option"><span class="navbar_text">Skills</span></div></a>
-            <a><div class="navbar_center_option"><span class="navbar_text">Projects</span></div></a>
+            <a href="#summary"><div class="navbar_center_option"><span class="navbar_text">Summary</span></div></a>
+            <a href="#education"><div class="navbar_center_option"><span class="navbar_text">Education</span></div></a>
+            <a href="#skills"><div class="navbar_center_option"><span class="navbar_text">Skills</span></div></a>
+            <a href="#projects"><div class="navbar_center_option"><span class="navbar_text">Projects</span></div></a>
             <!--end-->
             <div class="navbar_right_info"><a href="mailto:oleymr22@gmail.com">oleymr22@gmail.com</a></div>
         </div>
