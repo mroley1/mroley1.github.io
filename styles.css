@@ -14,6 +14,9 @@
     --main-colors-3: #8a8aff;
     --main-colors-4: #ba8cfc;
     --main-colors-5: #e488ed;
+    --main-colors-6: #f592b3;
+    --main-colors-7: #ffab9a;
+    --main-colors-8: #ffc958;
 }
 
 
@@ -49,7 +52,7 @@ body {background-color: #FFFFFF; margin: 0px;}
 .divider {width: 100%; margin: unset; padding: unset; min-height: 100px;}
 .circle_picture {border-radius: 100%; aspect-ratio: 1;}
 
-.card {display: flex; position: relative; width: 80%;left: 10%;border-radius: 25px;background-color: rgba(255, 255, 255, 0.377);margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;}
+.card {display: flex; position: relative; width: 80%;left: 10%;border-radius: 25px;margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;}
 .name {font-family: Merriweather; position: relative; left: 30px; width: calc(100% - 30px); margin-block-start: 0.30em;}
 .name_calm {font-family: Merriweather; position: relative; left: 30px; width: calc(100% - 30px); margin-block-start: 0.30em;}
 .body {font-family: Merriweather; position: relative;}
