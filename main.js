@@ -31,3 +31,35 @@ for (i = 0; i < dividers.length; i++) {
     context.lineTo(1000,100);
     context.fill();
 }
+
+const timelineDotTypes = {"timeline_begining": timelineBeginingGen, "timeline_entry": timelineEntryGen, "timeline_note": timelineNoteGen, "timeline_end": timelineEndGen}
+let timelines = document.querySelectorAll(".timeline_container");
+for (var i = 0; i < timelines.length; i++) {
+    let timeline = timelines[i];
+    let elements = timeline.children;
+    for (var j = 0; j < elements.length; j++) {
+        let element = elements[j];
+        timeline.insertBefore(timelineDotTypes[element.className](element.cloneNode(true)), element)
+        element.remove();
+    }
+}
+
+function timelineBeginingGen(content) {
+    var final = document.getElementById("timelineBeginingTemplate").content.cloneNode(true);
+    return final;
+}
+function timelineEntryGen(content) {
+    var final = document.getElementById("timelineEntryTemplate").content.cloneNode(true);
+    final.getElementById("timelineEntryTemplate_title").innerHTML = content.getAttribute("data-title");
+    final.getElementById("timelineEntryTemplate_content").innerHTML = content.innerHTML;
+    return final;
+}
+function timelineNoteGen(content) {
+    var final = document.getElementById("timelineNoteTemplate").content.cloneNode(true);
+    final.getElementById("timelineNoteTemplate_content").innerHTML = content.innerHTML;
+    return final;
+}
+function timelineEndGen(content) {
+    var final = document.getElementById("timelineEndTemplate").content.cloneNode(true);
+    return final;
+}

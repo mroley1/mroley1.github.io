@@ -7,7 +7,7 @@
     <body style="position: relative;">
         <div class="main">
             <div id="summary" style="width: 100%; background-color: var(--main-colors-1);">
-                <div class="card" style="background-color: rgba(255, 255, 255, 0.377);">
+                <div class="card">
                     <picture>
                         <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
                         <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
@@ -26,37 +26,53 @@
                 </div>
             </div>
             <canvas data-divider-after="1" class="divider" width="1000" height="100"></canvas>
+            <template id="timelineBeginingTemplate">
+                <table style="border-collapse: collapse; border-spacing: 0px">
+                    <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_beg.svg"></td>
+                    </tr>
+                </table>
+            </template>
+            <template id="timelineEntryTemplate">
+                <table style="border-collapse: collapse; border-spacing: 0px">
+                    <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_entry.svg"></td>
+                        <td id="timelineEntryTemplate_title"></td>
+                    </tr>
+                    <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_normal.svg"></td>
+                        <td id="timelineEntryTemplate_content"></td>
+                    </tr>
+                </table>
+            </template>
+            <template id="timelineNoteTemplate">
+                <table style="border-collapse: collapse; border-spacing: 0px">
+                    <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_note.svg"></td>
+                        <td id="timelineNoteTemplate_content"></td>
+                    </tr>
+                </table>
+            </template>
+            <template id="timelineEndTemplate">
+                <table style="border-collapse: collapse; border-spacing: 0px">
+                    <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_end.svg"></td>
+                    </tr>
+                </table>
+            </template>
             <div id="education" style="width: 100%; background-color: var(--main-colors-2);">
-                <div class="card">
-                    <div style="width: 100%; display: flex; flex-direction: row;">
-                        <div class="body_wrapper">
-                            <h1 class="name_calm">Rochester Institute of Technology</h1>
-                            <div class="body">
-                                <ul>
-                                    <li data-icon="location" class="list list_calm">Rochester, New York</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <picture>
-                            <source srcset="./assets/RIT.webp" type="image/webp">
-                            <source srcset="./assets/RIT.png" type="image/png">
-                            <img src="./assets/RIT.png" class="circle_picture">
-                        </picture>
+                <div class="timeline_container">
+                    <div class="timeline_begining">
+                        start
                     </div>
-                    <div style="width: 100%; display: flex; flex-direction: row;">
-                        <div class="body_wrapper">
-                            <h1 class="name_calm">Dallas High School</h1>
-                            <div class="body">
-                                <ul>
-                                    <li data-icon="location" class="list list_calm">Dallas, Pennslvania</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <picture>
-                            <source srcset="./assets/dallas.webp" type="image/webp">
-                            <source srcset="./assets/dallas.png" type="image/png">
-                            <img src="./assets/dallas.png" class="circle_picture">
-                        </picture>
+                    <div class="timeline_entry" data-date="today" data-title="Entry 1">
+                        stuff
+                    </div>
+                    <div class="timeline_note" data-date="tommorrow">
+                        things
+                    </div>
+                    <div class="timeline_end">
+                        end
                     </div>
                 </div>
             </div>
