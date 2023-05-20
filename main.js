@@ -1,6 +1,6 @@
 
 
-let socialButtons = document.querySelector(".navbar_left_info").children // get list of social buttons integrated
+let socialButtons = document.querySelectorAll(".navbar_social_button_a") // get list of social buttons integrated
 for (i = 0; i < socialButtons.length; i++) {
     // loop through each button
     let button = socialButtons[i].querySelector(".navbar_social_button");
@@ -32,6 +32,14 @@ for (i = 0; i < dividers.length; i++) {
     context.fill();
 }
 
+function * uid() {
+    index = 0;
+    while (true) {
+        yield index++;
+    }
+}
+const uidGenrator = uid();
+
 const timelineDotTypes = {"timeline_begining": timelineBeginingGen, "timeline_entry": timelineEntryGen, "timeline_note": timelineNoteGen, "timeline_end": timelineEndGen}
 let timelines = document.querySelectorAll(".timeline_container");
 for (var i = 0; i < timelines.length; i++) {
@@ -46,6 +54,10 @@ for (var i = 0; i < timelines.length; i++) {
     }
     timeline.appendChild(table)
 }
+for (var i = 0; i < timelines.length; i++) {
+    
+}
+
 
 function timelineBeginingGen(_) {
     var final = document.getElementById("timelineBeginingTemplate").content.cloneNode(true);
@@ -53,15 +65,32 @@ function timelineBeginingGen(_) {
 }
 function timelineEntryGen(content) {
     var final = document.getElementById("timelineEntryTemplate").content.cloneNode(true);
-    final.getElementById("timelineEntryTemplate_date").innerHTML = content.getAttribute("data-date");
-    final.getElementById("timelineEntryTemplate_title").innerHTML = content.getAttribute("data-title");
-    final.getElementById("timelineEntryTemplate_content").innerHTML = content.innerHTML;
+    let uid = uidGenrator.next().value;
+    let date = final.getElementById("timelineEntryTemplate_date");
+        date.innerHTML = content.getAttribute("data-date");
+        date.id = "timelineDate_" + uid;
+    let title = final.getElementById("timelineEntryTemplate_title");
+        title.innerHTML = content.getAttribute("data-title");
+        title.id = "timelineTitle_" + uid;
+    let bodyContent = final.getElementById("timelineEntryTemplate_content");
+        bodyContent.innerHTML = content.innerHTML;
+        bodyContent.id = "timelineEntryContent_" + uid;
+    let barExtension = final.getElementById("timelineEntryTemplate_barExtension");
+        // if (navigator.userAgent.search("Firefox") > -1) {
+        //     barExtension.style.height = "100%"
+        // }
+        barExtension.id = "timelineBarExtension_" + uid;
     return final;
 }
 function timelineNoteGen(content) {
     var final = document.getElementById("timelineNoteTemplate").content.cloneNode(true);
-    final.getElementById("timelineNoteTemplate_date").innerHTML = content.getAttribute("data-date");
-    final.getElementById("timelineNoteTemplate_content").innerHTML = content.innerHTML;
+    let uid = uidGenrator.next().value;
+    let date = final.getElementById("timelineNoteTemplate_date");
+        date.innerHTML = content.getAttribute("data-date");
+        date.id = "timelineNote_" + uid;
+    let bodyContent = final.getElementById("timelineNoteTemplate_content")
+        bodyContent.innerHTML = content.innerHTML;
+        bodyContent.id = "timelineNoteContent_" + uid;
     return final;
 }
 function timelineEndGen(_) {

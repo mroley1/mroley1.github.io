@@ -41,7 +41,7 @@
                     <tr style="margin: 0px;">
                         <td id="timelineEntryTemplate_date" style="width: 100px; height: 100px; padding: 0px; text-align: right; font-size: 20pt; font-family: Sriracha; color: rgb(34, 34, 34);"></td>
                         <td rowspan="2" style="width: 100px; height: 100px; padding: 0px; vertical-align: top; overflow: hidden;">
-                            <div style="display: flex; flex-direction: column; height: 100%;">
+                            <div id="timelineEntryTemplate_barExtension" style="display: flex; flex-direction: column; height: 100%;">
                                 <img src="./assets/timeline_svgs/timeline_entry.svg">
                                 <svg style="width: 100px; height: 100%" viewbox="0 0 100 100" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="40" width="20" height="100" fill="black"/>
@@ -83,12 +83,12 @@
                             <li>Solved technology and connection issues for students and faculty, maintain and repair equipment.</li>
                         </ul>
                     </div>
-                    <div class="timeline_entry" data-date="May 2021" data-title="Technology Aide">
+                    <div class="timeline_entry" data-date="May 2021" data-title="Technology Aide (add location) :P">
                         <ul style="font-size: 20pt; font-family: Merriweather;">
-                            <li>Prepared hardware for student and teacher use and solved connection and technology issues</li>
-                            <li>Configured network connections for security system</li>
-                            <li>Recorded instructional videos on use of hardware for faculty and staff</li>
-                            <li>Managed small groups of aides through completion of IT projects</li>
+                            <li>Prepared hardware for student and teacher use and solved connection and technology issues.</li>
+                            <li>Configured network connections for security system.</li>
+                            <li>Recorded instructional videos on use of hardware for faculty and staff.</li>
+                            <li>Managed small groups of aides through completion of IT projects.</li>
                         </ul>
                     </div>
                     <div class="timeline_note" data-date="June 2022">
@@ -110,16 +110,18 @@
         <div class="navbar">
             <!--beginning-->
             <div class="navbar_left_info">
-                <a name="github link" target="_blank" href="https://github.com/mroley1">
+                <a name="github link" target="_blank" href="https://github.com/mroley1" class="navbar_social_button_a">
                     <div class="navbar_social_button">
                         <img id="githubLink" src="./assets/social_svgs/github_default.svg">
                     </div>
                 </a>
-                <a name="github link" target="_blank" href="https://www.linkedin.com/in/matthew-oley-756404248/">
+                <a name="linkedin link" target="_blank" href="https://www.linkedin.com/in/matthew-oley-756404248/" class="navbar_social_button_a">
                     <div class="navbar_social_button">
                         <img id="linkedinLink" src="./assets/social_svgs/linkedin_default.svg">
                     </div>
                 </a>
+                <div style="width: 20px;"></div>
+                <a onclick="javascript:debug()">Resume</a>
             </div>
             <!--middle-->
             <a href="#summary"><div class="navbar_center_option"><span class="navbar_text">Summary</span></div></a>
