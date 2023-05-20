@@ -26,54 +26,83 @@
                 </div>
             </div>
             <canvas data-divider-after="1" class="divider" width="1000" height="100"></canvas>
+            
+            <!--?  TEMPLATE FOR BEGINNING CAP  -->
             <template id="timelineBeginingTemplate">
                 <table style="border-collapse: collapse; border-spacing: 0px">
                     <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;">&nbsp;</td>
                         <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_beg.svg"></td>
+                        <td style="height: 100px; padding: 0px;">&nbsp;</td>
                     </tr>
                 </table>
             </template>
+            
+            <!--?  TEMPLATE FOR ENTRY  -->
             <template id="timelineEntryTemplate">
-                <table style="border-collapse: collapse; border-spacing: 0px">
+                <table style="border-collapse: collapse; border-spacing: 0px; table-layout:fixed;">
                     <tr style="margin: 0px;">
-                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_entry.svg"></td>
-                        <td id="timelineEntryTemplate_title"></td>
+                        <td id="timelineEntryTemplate_date" style="width: 100px; height: 100px; padding: 0px; text-align: right; font-size: 20pt; font-family: Sriracha; color: rgb(34, 34, 34);"></td>
+                        <td rowspan="2" style="width: 100px; height: 100px; padding: 0px; vertical-align: top; overflow: hidden;">
+                            <div style="display: flex; flex-direction: column; height: 100%;">
+                                <img src="./assets/timeline_svgs/timeline_entry.svg">
+                                <svg style="width: 100px; height: 100%" viewbox="0 0 100 100" preserveAspectRatio="none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="40" width="20" height="100" fill="black"/>
+                                </svg>
+                            </div>
+                        </td>
+                        <td id="timelineEntryTemplate_title" style="font-size: 45pt; font-family: Merriweather;"></td>
                     </tr>
                     <tr style="margin: 0px;">
-                        <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_normal.svg"></td>
-                        <td id="timelineEntryTemplate_content"></td>
+                        <td style="width: 100px; padding: 0px;">&nbsp;</td>
+                        <!-- ghost col -->
+                        <td id="timelineEntryTemplate_content" style="vertical-align: top;"></td>
                     </tr>
                 </table>
             </template>
+            
+            <!--?  TEMPLATE FOR NOTE  -->
             <template id="timelineNoteTemplate">
                 <table style="border-collapse: collapse; border-spacing: 0px">
                     <tr style="margin: 0px;">
+                        <td id="timelineNoteTemplate_date" style="width: 100px; height: 100px; padding: 0px; text-align: right; font-size: 20pt; font-family: Sriracha; color: rgb(34, 34, 34);"></td>
                         <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_note.svg"></td>
                         <td id="timelineNoteTemplate_content"></td>
                     </tr>
                 </table>
             </template>
+            
+            <!--?  TEMPLATE FOR END CAP  -->
             <template id="timelineEndTemplate">
                 <table style="border-collapse: collapse; border-spacing: 0px">
                     <tr style="margin: 0px;">
+                        <td style="width: 100px; height: 100px; padding: 0px;">&nbsp;</td>
                         <td style="width: 100px; height: 100px; padding: 0px;"><img src="./assets/timeline_svgs/timeline_end.svg"></td>
+                        <td style="height: 100px; padding: 0px;">&nbsp;</td>
                     </tr>
                 </table>
             </template>
+            
             <div id="education" style="width: 100%; background-color: var(--main-colors-2);">
                 <div class="timeline_container">
-                    <div class="timeline_begining">
-                        start
+                    <div class="timeline_begining"></div>
+                    <div class="timeline_entry" data-date="Feb 2020" data-title="Technology Intern">
+                        <ul style="font-size: 20pt; font-family: Merriweather;">
+                            <li>Solved technology and connection issues for students and faculty, maintain and repair equipment.</li>
+                        </ul>
                     </div>
-                    <div class="timeline_entry" data-date="today" data-title="Entry 1">
-                        stuff
+                    <div class="timeline_entry" data-date="May 2021" data-title="Technology Aide">
+                        <ul style="font-size: 20pt; font-family: Merriweather;">
+                            <li>Prepared hardware for student and teacher use and solved connection and technology issues</li>
+                            <li>Configured network connections for security system</li>
+                            <li>Recorded instructional videos on use of hardware for faculty and staff</li>
+                            <li>Managed small groups of aides through completion of IT projects</li>
+                        </ul>
                     </div>
-                    <div class="timeline_note" data-date="tommorrow">
-                        things
+                    <div class="timeline_note" data-date="June 2022">
+                        <h2>High school diploma</h2>
                     </div>
-                    <div class="timeline_end">
-                        end
-                    </div>
+                    <div class="timeline_end"></div>
                 </div>
             </div>
             <canvas data-divider-after="2" class="divider" width="1000" height="100"></canvas>

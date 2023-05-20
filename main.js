@@ -50,12 +50,14 @@ function timelineBeginingGen(content) {
 }
 function timelineEntryGen(content) {
     var final = document.getElementById("timelineEntryTemplate").content.cloneNode(true);
+    final.getElementById("timelineEntryTemplate_date").innerHTML = content.getAttribute("data-date");
     final.getElementById("timelineEntryTemplate_title").innerHTML = content.getAttribute("data-title");
     final.getElementById("timelineEntryTemplate_content").innerHTML = content.innerHTML;
     return final;
 }
 function timelineNoteGen(content) {
     var final = document.getElementById("timelineNoteTemplate").content.cloneNode(true);
+    final.getElementById("timelineNoteTemplate_date").innerHTML = content.getAttribute("data-date");
     final.getElementById("timelineNoteTemplate_content").innerHTML = content.innerHTML;
     return final;
 }
