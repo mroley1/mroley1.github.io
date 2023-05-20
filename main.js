@@ -37,14 +37,17 @@ let timelines = document.querySelectorAll(".timeline_container");
 for (var i = 0; i < timelines.length; i++) {
     let timeline = timelines[i];
     let elements = timeline.children;
-    for (var j = 0; j < elements.length; j++) {
-        let element = elements[j];
-        timeline.insertBefore(timelineDotTypes[element.className](element.cloneNode(true)), element)
+    var table = document.createElement("table");
+    table.style = "border-collapse: collapse; border-spacing: 0px";
+    for (var j = 0, length = elements.length; j < length; j++) {
+        let element = elements[0];
+        table.append(timelineDotTypes[element.className](element.cloneNode(true)))
         element.remove();
     }
+    timeline.appendChild(table)
 }
 
-function timelineBeginingGen(content) {
+function timelineBeginingGen(_) {
     var final = document.getElementById("timelineBeginingTemplate").content.cloneNode(true);
     return final;
 }
@@ -61,7 +64,7 @@ function timelineNoteGen(content) {
     final.getElementById("timelineNoteTemplate_content").innerHTML = content.innerHTML;
     return final;
 }
-function timelineEndGen(content) {
+function timelineEndGen(_) {
     var final = document.getElementById("timelineEndTemplate").content.cloneNode(true);
     return final;
 }
