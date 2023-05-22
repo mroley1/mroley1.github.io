@@ -14,14 +14,17 @@ for (i = 0; i < socialButtons.length; i++) {
     });
 }
 
+// find all dividers
 let dividers = document.querySelectorAll(".divider")
 for (i = 0; i < dividers.length; i++) {
+    // loop through each
     let divider = dividers[i];
     var context = divider.getContext("2d");
     var width = divider.clientWidth;
     const dividerIndex = parseInt(divider.getAttribute("data-divider-after"))
     context.fillStyle = getComputedStyle(document.body).getPropertyValue("--main-colors-"+dividerIndex);
     context.fillRect(0, 0, 1000, 100);
+    // set background to top color
     context.fillStyle = getComputedStyle(document.body).getPropertyValue("--main-colors-"+(dividerIndex+1));
     context.beginPath();
     context.moveTo(0, 100);
@@ -30,8 +33,10 @@ for (i = 0; i < dividers.length; i++) {
     context.lineTo(700, 0);
     context.lineTo(1000,100);
     context.fill();
+    // set foreground to next color
 }
 
+// generator for timeline uids
 function * uid() {
     index = 0;
     while (true) {
@@ -40,25 +45,29 @@ function * uid() {
 }
 const uidGenrator = uid();
 
+// find all timelines
 const timelineDotTypes = {"timeline_begining": timelineBeginingGen, "timeline_entry": timelineEntryGen, "timeline_note": timelineNoteGen, "timeline_end": timelineEndGen}
 let timelines = document.querySelectorAll(".timeline_container");
 for (var i = 0; i < timelines.length; i++) {
     let timeline = timelines[i];
     let elements = timeline.children;
+    // set up table to insert
     var table = document.createElement("table");
     table.style = "border-collapse: collapse; border-spacing: 0px";
     for (var j = 0, length = elements.length; j < length; j++) {
         let element = elements[0];
+        // add each element to table
         table.append(timelineDotTypes[element.className](element.cloneNode(true)))
         element.remove();
     }
+    // append to main
     timeline.appendChild(table)
 }
 for (var i = 0; i < timelines.length; i++) {
     
 }
 
-
+// functions catalogued in timelineDotTypes, return tr(s) with correct formatting
 function timelineBeginingGen(_) {
     var final = document.getElementById("timelineBeginingTemplate").content.cloneNode(true);
     return final;
@@ -76,9 +85,10 @@ function timelineEntryGen(content) {
         bodyContent.innerHTML = content.innerHTML;
         bodyContent.id = "timelineEntryContent_" + uid;
     let barExtension = final.getElementById("timelineEntryTemplate_barExtension");
-        // if (navigator.userAgent.search("Firefox") > -1) {
-        //     barExtension.style.height = "100%"
-        // }
+        if (navigator.userAgent.search("Firefox") > -1) {
+            // trust me this is the best solution I found for this bug
+            barExtension.style.height = "100%"
+        }
         barExtension.id = "timelineBarExtension_" + uid;
     return final;
 }
