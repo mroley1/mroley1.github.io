@@ -55,20 +55,27 @@
 
     <body style="position: relative;">
         <div class="main">
+            <div id="title" style="width: 100%; background-color: var(--main-colors-0);">
+                <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px; padding: 15px; justify-content: center; flex-direction: column;">
+                    <span style="font-size: 100pt; font-family: Sriracha; text-align: center;">Matthew</span>
+                    <span style="font-size: 50pt; font-family: Sriracha; text-align: center; transform: translateY(-50pt);">Oley</span>
+                </div>
+            </div>
+            <canvas data-divider-after="0" class="divider" width="1000" height="100"></canvas>
             <div id="summary" style="width: 100%; background-color: var(--main-colors-1);">
-                <div class="card">
+                <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;">
                     <picture>
                         <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
                         <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
                         <img src="./assets/Oley_Matthew_profile.png" class="circle_picture">
                     </picture>
                     <div style="width: calc(100% - 300px);">
-                        <h1 class="name">Matthew Oley</h1>
                         <div class="body">
                             <ul>
                                 <li data-icon="location" class="list">Dallas, Pennsylvania</li>
                                 <li data-icon="school" class="list">RIT (BS Software Engineering)</li>
                                 <li data-icon="gpa" class="list">3.85 GPA</li>
+                                <li class="list">forklift certified</li>
                             </ul>
                         </div>
                     </div>
@@ -106,7 +113,22 @@
             </div>
             <canvas data-divider-after="2" class="divider" width="1000" height="100"></canvas>
             <div id="skills" style="width: 100%; background-color: var(--main-colors-3);">
-                
+                <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;">
+                    <div class="word_clot">
+                        <span class="word_clot_word word_clot_xsmall">x-small</span>
+                        <span class="word_clot_word word_clot_small">small</span>
+                        <span class="word_clot_word word_clot_medium">medium</span>
+                        <span class="word_clot_word word_clot_large">large</span>
+                        <span class="word_clot_word word_clot_xsmall">x-small</span>
+                        <span class="word_clot_word word_clot_small">small</span>
+                        <span class="word_clot_word word_clot_medium">medium</span>
+                        <span class="word_clot_word word_clot_large">large</span>
+                        <span class="word_clot_word word_clot_xsmall">x-small</span>
+                        <span class="word_clot_word word_clot_small">small</span>
+                        <span class="word_clot_word word_clot_medium">medium</span>
+                        <span class="word_clot_word word_clot_large">large</span>
+                    </div>
+                </div>
             </div>
             <canvas data-divider-after="3" class="divider" width="1000" height="100"></canvas>
             <div id="projects" style="width: 100%; background-color: var(--main-colors-4);">
@@ -128,7 +150,7 @@
                     </div>
                 </a>
                 <div style="width: 20px;"></div>
-                <a href="./resume.pdf">Resume</a>
+                <a target="_blank" href="./resume.pdf">Resume</a>
             </div>
             <!--middle-->
             <a href="#summary"><div class="navbar_center_option"><span class="navbar_text">Summary</span></div></a>

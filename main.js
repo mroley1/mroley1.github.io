@@ -107,3 +107,15 @@ function timelineEndGen(_) {
     var final = document.getElementById("timelineEndTemplate").content.cloneNode(true);
     return final;
 }
+
+let wordClots = document.querySelectorAll(".word_clot");
+const positions = {0:"top", 1:"center", 2:"bottom"}
+for (i = 0; i < wordClots.length; i++) {
+    let wordClot = wordClots[i];
+    let words = wordClot.querySelectorAll(".word_clot_word");
+    for (j = 0; j < words.length; j++) {
+        let word = words[j];
+        word.style
+    }
+    l = Math.floor(Math.random() * 3)
+}
