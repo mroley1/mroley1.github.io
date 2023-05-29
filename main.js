@@ -1,5 +1,6 @@
 
 
+// ! social buttons
 let socialButtons = document.querySelectorAll(".navbar_social_button_a") // get list of social buttons integrated
 for (i = 0; i < socialButtons.length; i++) {
     // loop through each button
@@ -14,6 +15,7 @@ for (i = 0; i < socialButtons.length; i++) {
     });
 }
 
+// ! dividers
 // find all dividers
 let dividers = document.querySelectorAll(".divider")
 for (i = 0; i < dividers.length; i++) {
@@ -36,6 +38,7 @@ for (i = 0; i < dividers.length; i++) {
     // set foreground to next color
 }
 
+// ! timeline
 // generator for timeline uids
 function * uid() {
     index = 0;
@@ -62,9 +65,6 @@ for (var i = 0; i < timelines.length; i++) {
     }
     // append to main
     timeline.appendChild(table)
-}
-for (var i = 0; i < timelines.length; i++) {
-    
 }
 
 // functions catalogued in timelineDotTypes, return tr(s) with correct formatting
@@ -108,6 +108,8 @@ function timelineEndGen(_) {
     return final;
 }
 
+
+// ! word clot
 let wordClots = document.querySelectorAll(".word_clot");
 const positions = {0:"top", 1:"center", 2:"bottom"}
 for (i = 0; i < wordClots.length; i++) {
@@ -118,4 +120,23 @@ for (i = 0; i < wordClots.length; i++) {
         word.style
     }
     l = Math.floor(Math.random() * 3)
+}
+
+// ! knowledge bar
+let knowledgeBars = document.querySelectorAll(".knowledgeBar");
+for (let i = 0; i < knowledgeBars.length; i++) {
+    let knowledgeBar = knowledgeBars[i];
+    let knowledgeAmmount = parseInt(knowledgeBar.getAttribute("data-knowledge"));
+    let knowledgeMax = parseInt(knowledgeBar.getAttribute("data-knowledgeMax"));
+    for (let j = 0; j < knowledgeMax; j++) {
+        let peice = document.createElement("div");
+        peice.classList = "knowledgeBar_dot_side";
+        if (knowledgeAmmount > j) {
+            peice.style.backgroundColor = knowledgeBar.getAttribute("data-fillColor");
+        } else {
+            peice.style.backgroundColor = knowledgeBar.getAttribute("data-blankColor");
+        }
+        knowledgeBar.appendChild(peice);
+    }
+    
 }

@@ -67,6 +67,16 @@ body {background-color: #FFFFFF; margin: 0px;}
 .word_clot .word_clot_small {font-size: 30pt;}
 .word_clot .word_clot_medium {font-size: 40pt;}
 .word_clot .word_clot_large {font-size: 50pt;}
+.skills_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
+.skills_skill {width: 100%; display: flex; flex-direction: row;}
+.skills_skill_logo {aspect-ratio: 1; border-radius: 10px; overflow: hidden;}
+.skills_skill_info {margin-left: 25px;}
+.skills_skill_info h1 {font-family: Merriweather; font-size: 30pt;}
+.knowledgeBar {display: flex; flex-direction: row;}
+.knowledgeBar_dot_side {height: 30px; width: 15px;}
+.knowledgeBar .knowledgeBar_dot_side:nth-child(even) {border-radius: 0px 1000px 1000px 0px; margin-right: 3px;}
+.knowledgeBar .knowledgeBar_dot_side:nth-child(odd) {border-radius: 1000px 0px 0px 1000px; margin-left: 3px;}
+
 
 @media (min-width: 935px) {
     .circle_picture {width: 300px; height: 300px;}
