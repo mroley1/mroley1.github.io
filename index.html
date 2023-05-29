@@ -55,14 +55,14 @@
 
     <body style="position: relative;">
         <div class="main">
-            <div id="title" style="width: 100%; background-color: var(--main-colors-0);">
+            <div id="title" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-0);">
                 <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px; padding: 15px; justify-content: center; flex-direction: column;">
                     <span style="font-size: 100pt; font-family: Sriracha; text-align: center;">Matthew</span>
                     <span style="font-size: 50pt; font-family: Sriracha; text-align: center; transform: translateY(-50pt);">Oley</span>
                 </div>
             </div>
             <canvas data-divider-after="0" class="divider" width="1000" height="100"></canvas>
-            <div id="summary" style="width: 100%; background-color: var(--main-colors-1);">
+            <div id="summary" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-1);">
                 <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;">
                     <picture>
                         <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <canvas data-divider-after="1" class="divider" width="1000" height="100"></canvas>
-            <div id="experience" style="width: 100%; background-color: var(--main-colors-2);">
+            <div id="experience" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-2);">
                 <div class="timeline_container">
                     <div class="timeline_begining"></div>
                     <div class="timeline_entry" data-date="Feb 2020" data-title="Technology Intern">
@@ -112,39 +112,50 @@
                 </div>
             </div>
             <canvas data-divider-after="2" class="divider" width="1000" height="100"></canvas>
-            <div id="skills" style="width: 100%; background-color: var(--main-colors-3);">
+            <div id="skills" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-3);">
                 <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;">
-                    <!--<div class="word_clot">
-                        <span class="word_clot_word word_clot_xsmall">x-small</span>
-                        <span class="word_clot_word word_clot_small">small</span>
-                        <span class="word_clot_word word_clot_medium">medium</span>
-                        <span class="word_clot_word word_clot_large">large</span>
-                        <span class="word_clot_word word_clot_xsmall">x-small</span>
-                        <span class="word_clot_word word_clot_small">small</span>
-                        <span class="word_clot_word word_clot_medium">medium</span>
-                        <span class="word_clot_word word_clot_large">large</span>
-                        <span class="word_clot_word word_clot_xsmall">x-small</span>
-                        <span class="word_clot_word word_clot_small">small</span>
-                        <span class="word_clot_word word_clot_medium">medium</span>
-                        <span class="word_clot_word word_clot_large">large</span>
-                    </div>-->
                     <div class="skills_container">
-                        <div id="skillJavascript" class="skills_skill">
+                        <div id="skillJavascript" class="skills_skill_left">
                             <div class="skills_skill_logo">
                                 <picture>
-                                    <img src="./assets/skillslogos_pngs/JavaScript_Logo.png">
+                                    <img src="./assets/skillslogos_pngs/JavaScript_logo.png">
                                 </picture>
                             </div>
                             <div class="skills_skill_info">
-                                <h1 style="margin: 10px;">JavaScript</h1>
+                                <h1 style="margin: 10px 0px 10px 10px;">JavaScript</h1>
                                 <div class="knowledgeBar" data-knowledge="10" data-knowledgeMax="10" data-fillColor="#5a33a5" data-blankColor="#5a33a580"></div>
+                                <div class="skill_slip_container">
+                                    <a href="https://www.merriam-webster.com/dictionary/recursion" target="_blank"><div class="skill_slip">Web</div></a>
+                                    <a href="https://nodejs.org/en/about" target="_blank"><div class="skill_slip">Node</div></a>
+                                    <a href="https://firebase.google.com/" target="_blank"><div class="skill_slip">Firebase</div></a>
+                                    <a href="https://support.discord.com/hc/en-us/articles/212889058-Discord-s-Official-API" target="_blank"><div class="skill_slip">Discord API</div></a>
+                                    <a href="https://pterodactyl.io/" target="_blank"><div class="skill_slip">Pteridactyl API</div></a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank"><div class="skill_slip">ECMAScript Modules</div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="skillHtmlCss" class="skills_skill_right">
+                            <div class="skills_skill_logo">
+                                <picture>
+                                    <img src="./assets/skillslogos_pngs/HTMLandCSS_logo.png">
+                                </picture>
+                            </div>
+                            <div class="skills_skill_info">
+                                <h1 style="margin: 10px 0px 10px 10px;">HTML & CSS</h1>
+                                <div class="knowledgeBar" data-knowledge="9" data-knowledgeMax="10" data-fillColor="#5a33a5" data-blankColor="#5a33a580"></div>
+                                <div class="skill_slip_container">
+                                    <div class="skill_slip">Web</div>
+                                    <div class="skill_slip">Node</div>
+                                    <div class="skill_slip">Firebase</div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <canvas data-divider-after="3" class="divider" width="1000" height="100"></canvas>
-            <div id="projects" style="width: 100%; background-color: var(--main-colors-4);">
+            <div id="projects" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-4);">
                 
             </div>
             <canvas data-divider-after="4" class="divider" width="1000" height="100"></canvas>

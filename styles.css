@@ -39,7 +39,7 @@ body {background-color: #FFFFFF; margin: 0px;}
 .navbar {position: fixed; top: 0px; left: 0px; width: 100%; height: 3rem; background-color: black; display: flex; flex-flow: row; align-content: center; justify-content: center;}
 .navbar_center_option {height: 100%; background-color: black; margin: 0px 4px 0px 4px; padding: 0px 12px 0px 12px; font-family: Sriracha; text-align: center; font-size: var(--navbar-font-size); cursor: pointer; transition: background-color 0.2s linear;}
 .navbar_center_option:hover {background-color: white;}
-@media (max-width: 935px) {.navbar_center_option {display: none;}}
+@media (max-width: 1000px) {.navbar_center_option {display: none;}}
 .navbar_right_info {height: 100%; color: white; font-family: Sriracha; position: absolute; text-align: right; font-size: var(--navbar-font-size); right: 20px;}
 .navbar a {text-decoration: none; color: white;}
 .navbar_left_info {height: 100%; color: white; font-family: Sriracha; position: absolute; text-align: right; font-size: var(--navbar-font-size); left: 5px; display: flex; flex-flow: row;}
@@ -50,7 +50,7 @@ body {background-color: #FFFFFF; margin: 0px;}
 
 .main {position: absolute; top: 3rem; height: calc(100% - 3rem); width: 100%; display: flex; flex-direction: column;}
 
-.divider {width: 100%; margin: unset; padding: unset; min-height: 100px;}
+.divider {width: 100%; margin: 0px 0px -1px 0px; padding: unset; min-height: 100px;}
 .circle_picture {border-radius: 100%; aspect-ratio: 1;}
 
 .name {font-family: Merriweather; position: relative; left: 30px; width: calc(100% - 30px); margin-block-start: 0.30em;}
@@ -61,21 +61,22 @@ body {background-color: #FFFFFF; margin: 0px;}
 
 .timeline_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
 
-.word_clot {display: flex; flex-wrap: wrap; justify-content: center; height: min-content;}
-.word_clot_word {margin: 10px;}
-.word_clot .word_clot_xsmall {font-size: 20pt;}
-.word_clot .word_clot_small {font-size: 30pt;}
-.word_clot .word_clot_medium {font-size: 40pt;}
-.word_clot .word_clot_large {font-size: 50pt;}
 .skills_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
-.skills_skill {width: 100%; display: flex; flex-direction: row;}
-.skills_skill_logo {aspect-ratio: 1; border-radius: 10px; overflow: hidden;}
-.skills_skill_info {margin-left: 25px;}
+.skills_skill_left {width: 100%; display: flex; flex-direction: row; margin: 0px 0px 70px 0px;}
+.skills_skill_right {width: 100%; display: flex; flex-direction: row-reverse; text-align: right;}
+.skills_skill_logo {aspect-ratio: 1; border-radius: 10px; overflow: hidden; flex: 0 0 200px;}
+.skills_skill_info {margin: 0px 25px 0px 25px; max-width: calc(100% - 250px);}
 .skills_skill_info h1 {font-family: Merriweather; font-size: 30pt;}
-.knowledgeBar {display: flex; flex-direction: row;}
+.skills_skill_left .knowledgeBar {display: flex; flex-direction: row; justify-content: left;}
+.skills_skill_right .knowledgeBar {display: flex; flex-direction: row; justify-content: right;}
 .knowledgeBar_dot_side {height: 30px; width: 15px;}
 .knowledgeBar .knowledgeBar_dot_side:nth-child(even) {border-radius: 0px 1000px 1000px 0px; margin-right: 3px;}
 .knowledgeBar .knowledgeBar_dot_side:nth-child(odd) {border-radius: 1000px 0px 0px 1000px; margin-left: 3px;}
+.skills_skill_left .skill_slip_container {display: flex; flex-direction: row; flex-wrap: wrap; margin: 10px 0px 0px 0px; justify-content: left;}
+.skills_skill_right .skill_slip_container {display: flex; flex-direction: row; flex-wrap: wrap; margin: 10px 0px 0px 0px; justify-content: right;}
+.skill_slip_container a {color: black; text-decoration: none;}
+.skill_slip {border-width: 1px; border-style: solid; font-size: 20px; border-radius: 10px; padding: 2px 6px 2px 6px; margin: 0px 2px 6px 2px; cursor: pointer; transition: all 0.1s ease-in-out; white-space: nowrap;}
+.skill_slip:hover {border-color: white; color: white;}
 
 
 @media (min-width: 935px) {
