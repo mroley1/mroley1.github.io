@@ -22,11 +22,13 @@
 
 
 @media (min-width: 935px) {
+    .list[data-icon=major]::marker {content: url(assets/list_pngs/major.png);}
     .list[data-icon=location]::marker {content: url(assets/list_pngs/location.png);}
     .list[data-icon=school]::marker {content: url(assets/list_pngs/school.png);}
     .list[data-icon=gpa]::marker {content: url(assets/list_pngs/gpa.png);}
 }
 @media (max-width: 935px) {
+    .list[data-icon=major]::marker {content: url(assets/list_pngs/major_small.png);}
     .list[data-icon=location]::marker {content: url(assets/list_pngs/location_small.png);}
     .list[data-icon=school]::marker {content: url(assets/list_pngs/school_small.png);}
     .list[data-icon=gpa]::marker {content: url(assets/list_pngs/gpa_small.png);}
@@ -53,18 +55,15 @@ body {background-color: #FFFFFF; margin: 0px;}
 .divider {width: 100%; margin: 0px 0px -1px 0px; padding: unset; min-height: 100px;}
 .circle_picture {border-radius: 100%; aspect-ratio: 1;}
 
-.name {font-family: Merriweather; position: relative; left: 30px; width: calc(100% - 30px); margin-block-start: 0.30em;}
-.name_calm {font-family: Merriweather; position: relative; left: 30px; width: calc(100% - 30px); margin-block-start: 0.30em;}
 .body {font-family: Merriweather; position: relative;}
 .list {padding-left: 15px; margin-top: 10px;}
-.list_calm {padding-left: 15px; margin-top: 10px;}
 
 .timeline_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
 
-.skills_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
+.skills_container {display: flex; width: 840px; left: calc(50% - 420px); position: relative; margin: 70px 0px 70px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
 .skills_skill_left {width: 100%; display: flex; flex-direction: row; margin: 0px 0px 70px 0px;}
 .skills_skill_right {width: 100%; display: flex; flex-direction: row-reverse; margin: 0px 0px 70px 0px; text-align: right;}
-.skills_skill_logo {aspect-ratio: 1; border-radius: 10px; overflow: hidden; flex: 0 0 200px;}
+.skills_skill_logo {aspect-ratio: 1; border-radius: 10px; overflow: hidden; flex: 0 0 200px; cursor: pointer;}
 .skills_skill_info {margin: 0px 25px 0px 25px; max-width: calc(100% - 250px);}
 .skills_skill_info h1 {font-family: Merriweather; font-size: 30pt;}
 .skills_skill_left .knowledgeBar {display: flex; flex-direction: row; justify-content: left;}
@@ -81,20 +80,14 @@ body {background-color: #FFFFFF; margin: 0px;}
 
 @media (min-width: 935px) {
     .circle_picture {width: 300px; height: 300px;}
-    .name {font-size: 60pt;}
-    .name_calm {font-size: 50pt;}
     .body_wrapper {width: calc(100% - 300px);}
     .body {left: 80px; width: calc(100% - 80px);}
     .list {font-size: 30pt;}
-    .list_calm {font-size: 20pt;}
 }
 @media (max-width: 935px) {
-    .circle_picture {width: 150px; height: 150px;}
-    .name {font-size: 30pt;}
-    .name_calm {font-size: 20pt;}
-    .body_wrapper {width: calc(100% - 150px);}
+    .circle_picture {width: 200px; height: 200px;}
+    .body_wrapper {width: calc(100% - 200px);}
     .body {left: 40px; width: calc(100% - 40px);}
-    .list {font-size: 15pt;}
-    .list {font-size: 10pt;}
+    .list {font-size: 20pt;}
 }
 
