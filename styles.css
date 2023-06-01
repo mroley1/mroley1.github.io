@@ -9,7 +9,8 @@
 }
 :root {
     --navbar-font-size: 18pt;
-    --main-colors-0: #45ceb7;
+    --main-colors-BG: #45ceb7;
+    --main-colors-0: #00000000;
     --main-colors-1: #48b2d4;
     --main-colors-2: #5e91f5;
     --main-colors-3: #8a8aff;
@@ -36,7 +37,7 @@
 }
 
 html {scroll-behavior: smooth;}
-body {background-color: #FFFFFF; margin: 0px;}
+body {background-color: var(--main-colors-BG); margin: 0px;}
 
 .navbar {position: fixed; top: 0px; left: 0px; width: 100%; height: 3rem; background-color: black; display: flex; flex-flow: row; align-content: center; justify-content: center;}
 .navbar_center_option {height: 100%; background-color: black; margin: 0px 4px 0px 4px; padding: 0px 12px 0px 12px; font-family: Sriracha; text-align: center; font-size: var(--navbar-font-size); cursor: pointer; transition: background-color 0.2s linear;}
@@ -61,11 +62,13 @@ body {background-color: #FFFFFF; margin: 0px;}
 .timeline_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
 
 .skills_container {display: flex; width: 840px; left: calc(50% - 420px); position: relative; margin: 70px 0px 70px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
-.skills_skill_left {width: 100%; display: flex; flex-direction: row; margin: 10px 0px 10px 0px;}
-.skills_skill_right {width: 100%; display: flex; flex-direction: row-reverse; margin: 10px 0px 10px 0px; text-align: right;}
+.skills_skill {width: min-content; display: flex; margin: 10px 0px 10px 0px; background-color: var(--main-colors-4); border-radius: 25px; padding: 20px 35px 20px 35px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+.skills_skill_left {flex-direction: row; text-align: left; align-self: flex-start;}
+.skills_skill_right {flex-direction: row-reverse; text-align: right; align-self: flex-end;}
 .skills_skill_logo {aspect-ratio: 1; border-radius: 10px; overflow: hidden; flex: 0 0 200px; cursor: pointer;}
 .skills_skill_info {margin: 0px 25px 0px 25px; max-width: calc(100% - 250px);}
-.skills_skill_info h1 {font-family: Merriweather; font-size: 30pt;}
+.skills_skill_left .skills_skill_info h1 {font-family: Merriweather; font-size: 30pt; margin: 10px 40px 10px 10px;}
+.skills_skill_right .skills_skill_info h1 {font-family: Merriweather; font-size: 30pt; margin: 10px 0px 10px 40px;}
 .skills_skill_left .knowledgeBar {display: flex; flex-direction: row; justify-content: left;}
 .skills_skill_right .knowledgeBar {display: flex; flex-direction: row; justify-content: right;}
 .knowledgeBar_dot_side {height: 30px; width: 15px;}
@@ -74,7 +77,7 @@ body {background-color: #FFFFFF; margin: 0px;}
 .skills_skill_left .skill_slip_container {display: flex; flex-direction: row; flex-wrap: wrap; margin: 10px 0px 0px 0px; justify-content: left;}
 .skills_skill_right .skill_slip_container {display: flex; flex-direction: row; flex-wrap: wrap; margin: 10px 0px 0px 0px; justify-content: right;}
 .skill_slip_container a {color: black; text-decoration: none;}
-.skill_slip {border-width: 1px; border-style: solid; font-size: 20px; border-radius: 10px; padding: 2px 6px 2px 6px; margin: 0px 2px 6px 2px; cursor: pointer; transition: all 0.1s ease-in-out; white-space: nowrap;}
+.skill_slip {border-width: 1px; border-style: solid; font-size: 20px; border-radius: 10px; padding: 2px 6px 2px 6px; margin: 0px 2px 6px 2px; cursor: pointer; transition: all 0.1s ease-in-out; white-space: nowrap; font-family: Merriweather;}
 .skill_slip:hover {border-color: white; color: white;}
 
 

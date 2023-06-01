@@ -56,15 +56,15 @@
 
     <body style="position: relative;">
         <div class="main">
-            <div id="title" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-0);">
-                <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px; padding: 15px; justify-content: center; flex-direction: column;">
+            <div id="title" style="width: 100%; flex: 0 0 500px; margin: 0px 0px -1px 0px; background-color: var(--main-colors-0);">
+                <div style="display: flex; position: relative; width: 80%; left: 10%; right: 10%; margin: 100px 0px 0px 0px; padding: 15px; justify-content: center; flex-direction: column;">
                     <span style="font-size: 100pt; font-family: Sriracha; text-align: center;">Matthew</span>
                     <span style="font-size: 50pt; font-family: Sriracha; text-align: center; transform: translateY(-50pt);">Oley</span>
                 </div>
             </div>
-            <canvas data-divider-after="0" class="divider" width="1000" height="100"></canvas>
-            <div id="summary" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-1);">
-                <div style="display: flex; position: relative; width: 80%;left: 10%;right: 10%;margin: 50px 0px 50px 0px;flex-wrap: wrap; padding: 15px;">
+            <canvas id="summary" data-divider-after="0" class="divider" width="1000" height="100"></canvas>
+            <div style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-1);">
+                <div style="display: flex; position: relative; width: 80%; left: 10%; right: 10%; margin: 70px 0px 100px 0px; flex-wrap: wrap; padding: 30px; background-color: #71c1de; border-radius: 27px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                     <picture>
                         <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
                         <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
@@ -82,8 +82,8 @@
                     </div>
                 </div>
             </div>
-            <canvas data-divider-after="1" class="divider" width="1000" height="100"></canvas>
-            <div id="experience" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-2);">
+            <canvas id="experience" data-divider-after="1" class="divider" width="1000" height="100"></canvas>
+            <div style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-2);">
                 <div class="timeline_container">
                     <div class="timeline_begining"></div>
                     <div class="timeline_entry" data-date="Sept 2023" data-title="Carpenter">
@@ -112,10 +112,10 @@
                     <div class="timeline_end"></div>
                 </div>
             </div>
-            <canvas data-divider-after="2" class="divider" width="1000" height="100"></canvas>
-            <div id="skills" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-3);">
+            <canvas id="skills" data-divider-after="2" class="divider" width="1000" height="100"></canvas>
+            <div style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-3);">
                 <div class="skills_container">
-                    <div id="skillJavascript" class="skills_skill_left">
+                    <div id="skillJavascript" class="skills_skill skills_skill_left">
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/javascript">
                             <div class="skills_skill_logo">
                                 <picture>
@@ -124,8 +124,8 @@
                             </div>
                         </a>
                         <div class="skills_skill_info">
-                            <h1 style="margin: 10px 0px 10px 10px;">JavaScript</h1>
-                            <div class="knowledgeBar" data-knowledge="10" data-knowledgeMax="10" data-fillColor="#5a33a5" data-blankColor="#5a33a580"></div>
+                            <h1>JavaScript</h1>
+                            <div class="knowledgeBar" data-knowledge="10" data-knowledgeMax="10" data-fillColor="#5E91F5" data-blankColor="#8A8AFF80"></div>
                             <div class="skill_slip_container">
                                 <a href="https://www.merriam-webster.com/dictionary/recursion" target="_blank"><div class="skill_slip">Web</div></a>
                                 <a href="https://nodejs.org/en/about" target="_blank"><div class="skill_slip">Node</div></a>
@@ -136,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="skillHtmlCss" class="skills_skill_right">
+                    <div id="skillPython" class="skills_skill skills_skill_right">
                         <a target="_blank" href="https://www.python.org/">
                             <div class="skills_skill_logo">
                                 <picture>
@@ -145,15 +145,15 @@
                             </div>
                         </a>
                         <div class="skills_skill_info">
-                            <h1 style="margin: 10px 0px 10px 10px;">Python</h1>
-                            <div class="knowledgeBar" data-knowledge="8" data-knowledgeMax="10" data-fillColor="#5a33a5" data-blankColor="#5a33a580"></div>
+                            <h1>Python</h1>
+                            <div class="knowledgeBar" data-knowledge="8" data-knowledgeMax="10" data-fillColor="#5E91F5" data-blankColor="#8A8AFF80"></div>
                             <div class="skill_slip_container">
                                 <a href="https://discordpy.readthedocs.io/en/stable/" target="_blank"><div class="skill_slip">Discord API</div></a>
                                 <a href="https://docs.python.org/3/library/tkinter.html" target="_blank"><div class="skill_slip">tkinter</div></a>
                             </div>
                         </div>
                     </div>
-                    <div id="skillCCpp" class="skills_skill_left">
+                    <div id="skillCCpp" class="skills_skill skills_skill_left">
                         <a target="_blank" href="https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">
                             <div class="skills_skill_logo">
                                 <picture>
@@ -162,8 +162,8 @@
                             </div>
                         </a>
                         <div class="skills_skill_info">
-                            <h1 style="margin: 10px 0px 10px 10px;">C/C++</h1>
-                            <div class="knowledgeBar" data-knowledge="6" data-knowledgeMax="10" data-fillColor="#5a33a5" data-blankColor="#5a33a580"></div>
+                            <h1>C/C++</h1>
+                            <div class="knowledgeBar" data-knowledge="6" data-knowledgeMax="10" data-fillColor="#5E91F5" data-blankColor="#8A8AFF80"></div>
                             <div class="skill_slip_container">
                                 <a href="https://linuxhandbook.com/using-make/" target="_blank"><div class="skill_slip">Make</div></a>
                                 <a href="https://sourceware.org/gdb/" target="_blank"><div class="skill_slip">GDB</div></a>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="skillJava" class="skills_skill_right">
+                    <div id="skillJava" class="skills_skill skills_skill_right">
                         <a target="_blank" href="https://www.java.com/en/">
                             <div class="skills_skill_logo">
                                 <picture>
@@ -181,8 +181,8 @@
                             </div>
                         </a>
                         <div class="skills_skill_info">
-                            <h1 style="margin: 10px 0px 10px 10px;">Java</h1>
-                            <div class="knowledgeBar" data-knowledge="5" data-knowledgeMax="10" data-fillColor="#5a33a5" data-blankColor="#5a33a580"></div>
+                            <h1>Java</h1>
+                            <div class="knowledgeBar" data-knowledge="5" data-knowledgeMax="10" data-fillColor="#5E91F5" data-blankColor="#8A8AFF80"></div>
                             <div class="skill_slip_container">
                                 <a href="https://openjfx.io/" target="_blank"><div class="skill_slip">JavaFX</div></a>
                                 <a href="https://docs.oracle.com/javase/tutorial/networking/overview/networking.html" target="_blank"><div class="skill_slip">Networking</div></a>
@@ -191,8 +191,8 @@
                     </div>
                 </div>
             </div>
-            <canvas data-divider-after="3" class="divider" width="1000" height="100"></canvas>
-            <div id="projects" style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-4);">
+            <canvas id="projects" data-divider-after="3" class="divider" width="1000" height="100"></canvas>
+            <div style="width: 100%; margin: 0px 0px -1px 0px; background-color: var(--main-colors-4);">
                 
             </div>
             <canvas data-divider-after="4" class="divider" width="1000" height="100"></canvas>
