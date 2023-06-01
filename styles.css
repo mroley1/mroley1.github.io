@@ -10,7 +10,7 @@
 :root {
     --navbar-font-size: 18pt;
     --main-colors-BG: #45ceb7;
-    --main-colors-0: #00000000;
+    --main-colors-0: #45ceb7;
     --main-colors-1: #48b2d4;
     --main-colors-2: #5e91f5;
     --main-colors-3: #8a8aff;
@@ -59,7 +59,7 @@ body {background-color: var(--main-colors-BG); margin: 0px;}
 .body {font-family: Merriweather; position: relative;}
 .list {padding-left: 15px; margin-top: 10px;}
 
-.timeline_container {display: flex; position: relative; width: 90%; left: 5%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
+.timeline_container {display: flex; position: relative; width: min-content; min-width: 75%; margin: 50px 0px 50px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
 
 .skills_container {display: flex; width: 840px; left: calc(50% - 420px); position: relative; margin: 70px 0px 70px 0px; flex-wrap: wrap; padding: 15px; flex-direction: column;}
 .skills_skill {width: min-content; display: flex; margin: 10px 0px 10px 0px; background-color: var(--main-colors-4); border-radius: 25px; padding: 20px 35px 20px 35px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
