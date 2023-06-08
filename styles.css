@@ -33,8 +33,11 @@
     .list[data-icon=location]::marker {content: url(assets/list_pngs/location_small.png);}
     .list[data-icon=school]::marker {content: url(assets/list_pngs/school_small.png);}
     .list[data-icon=gpa]::marker {content: url(assets/list_pngs/gpa_small.png);}
-    
 }
+
+.social_button_fade_github:hover {background-color: #5a33a5;}
+.social_button_fade_linkedin:hover {background-color: #0a66c2;}
+
 
 html {scroll-behavior: smooth;}
 body {background-color: var(--main-colors-BG); margin: 0px;}
@@ -46,9 +49,11 @@ body {background-color: var(--main-colors-BG); margin: 0px;}
 .navbar_right_info {height: 100%; color: white; font-family: Sriracha; position: absolute; text-align: right; font-size: var(--navbar-font-size); right: 20px;}
 .navbar a {text-decoration: none; color: white;}
 .navbar_left_info {height: 100%; color: white; font-family: Sriracha; position: absolute; text-align: right; font-size: var(--navbar-font-size); left: 5px; display: flex; flex-flow: row;}
-.navbar_social_button {height: 2rem; width: 2rem; position: relative; top: 0.5rem; margin: 0px 5px 0px 5px;}
 .navbar_text {transform:translateY(calc(50% - var(--navbar-font-size))); text-decoration: underline; color: white;  transition: text-decoration 0.2s linear, color 0.2s linear;}
 .navbar_center_option:hover .navbar_text {text-decoration: none; color: black;}
+.navbar_social_button {height: 2rem; width: 2rem; position: relative; top: 0.5rem; margin: 0px 5px 0px 5px; background-color: white; transition: background-color 0.2s linear;}
+.navbar_social_button:hover {background-color: attr("data-color");}
+.navbar_social_button img {height: 2rem; width: 2rem;}
 
 
 .main {position: absolute; top: 3rem; height: calc(100% - 3rem); width: 100%; display: flex; flex-direction: column;}

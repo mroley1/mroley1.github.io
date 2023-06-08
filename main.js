@@ -1,20 +1,4 @@
 
-
-// ! social buttons
-let socialButtons = document.querySelectorAll(".navbar_social_button_a") // get list of social buttons integrated
-for (i = 0; i < socialButtons.length; i++) {
-    // loop through each button
-    let button = socialButtons[i].querySelector(".navbar_social_button");
-    // If mouse enters button switch SVG to selected one
-    button.addEventListener("mouseenter", (e) => {
-        e.target.firstElementChild.src = e.target.firstElementChild.src.replace(/default/, "selected");
-    });
-    // If mouse leaves button switch SVG to default one
-    button.addEventListener("mouseout", (e) => {
-        e.target.src = e.target.src.replace(/selected/, "default");
-    });
-}
-
 // ! dividers
 // find all dividers
 let dividers = document.querySelectorAll(".divider")
@@ -106,20 +90,6 @@ function timelineNoteGen(content) {
 function timelineEndGen(_) {
     var final = document.getElementById("timelineEndTemplate").content.cloneNode(true);
     return final;
-}
-
-
-// ! word clot
-let wordClots = document.querySelectorAll(".word_clot");
-const positions = {0:"top", 1:"center", 2:"bottom"}
-for (i = 0; i < wordClots.length; i++) {
-    let wordClot = wordClots[i];
-    let words = wordClot.querySelectorAll(".word_clot_word");
-    for (j = 0; j < words.length; j++) {
-        let word = words[j];
-        word.style
-    }
-    l = Math.floor(Math.random() * 3)
 }
 
 // ! knowledge bar
