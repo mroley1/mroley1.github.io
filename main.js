@@ -14,10 +14,7 @@ for (i = 0; i < dividers.length; i++) {
     context.fillStyle = getComputedStyle(document.body).getPropertyValue("--main-colors-"+(dividerIndex+1));
     context.beginPath();
     context.moveTo(0, 100);
-    context.lineTo(300, 0);
-    context.lineTo(500, 50);
-    context.lineTo(700, 0);
-    context.lineTo(1000,100);
+    context.bezierCurveTo(300, 0, 700, 0, 1000, 100);
     context.fill();
     // set foreground to next color
 }
