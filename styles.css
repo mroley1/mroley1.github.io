@@ -56,7 +56,7 @@ body {background-color: var(--main-colors-BG); margin: 0px; overscroll-behavior-
 .navbar_social_button img {height: 2rem; width: 2rem;}
 
 
-.main {position: absolute; top: 3rem; width: 100%; display: flex; flex-direction: column;}
+.main {position: absolute; top: 3rem; width: 100%; display: flex; flex-direction: column; overflow: visible;}
 
 .divider {width: 100%; margin: 0px 0px -1px 0px; padding: unset; min-height: 100px;}
 .circle_picture {border-radius: 100%; aspect-ratio: 1;}
