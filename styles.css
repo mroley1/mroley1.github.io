@@ -13,12 +13,13 @@
     --main-colors-0: transparent;
     --main-colors-1: #48b2d4;
     --main-colors-2: #5e91f5;
-    --main-colors-3: #8a8aff;
-    --main-colors-4: #ba8cfc;
-    --main-colors-5: #e488ed;
-    --main-colors-6: #f592b3;
-    --main-colors-7: #ffab9a;
-    --main-colors-8: #ffc958;
+    --main-colors-3: #4981f1;
+    --main-colors-4: #2165ee;
+    --main-colors-5: #0052f7;
+    --accent-1: #8A8BFF;
+    --accent-2: #c18aff;
+    --experience-fill: #a288fd;
+    --experience-blank: #a288fd80;
 }
 
 
