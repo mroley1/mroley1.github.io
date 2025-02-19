@@ -2,14 +2,16 @@
 body {
     background-color: #363543;
     color: #FFFFFF;
+    font-family: "Inika", serif;
+    margin: 0;
 }
 
 .navbar {
-    position: absolute;
+    position: static;
     display: block;
     height: 1.5em;
     font-size: 20pt;
-    margin: 0 0.5em;
+    margin: 8px 0.6em;
 }
 
 .navbar a {
@@ -56,4 +58,138 @@ body {
 
 a.external:hover::after {
     opacity: 1;
+}
+
+#summary {
+    margin: 2em 0;
+    width: 100%;
+}
+
+#summary .split {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#summary .split .image {
+    min-width: 250px;
+    max-width: 450px;
+    position: relative;
+}
+
+#summary .split .image .circle_picture {
+    margin: 10%;
+    border-radius: 100%;
+    width: 80%;
+}
+
+#summary .split .image::before {
+    content: "";
+    background-image: url( "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cpath%20d%3D%22M10%2010%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2230%22%20fill%3D%22%23A2A2B4%22%20%2F%3E%3C%2Fsvg%3E" );
+    background-repeat: repeat;
+    background-size: 25%;
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+}
+
+#summary .split .image .vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    margin-left: 30%;
+}
+
+#summary .split .body {
+    min-width: 400px;
+    max-width: 410px;
+    font-size: 17pt;
+    text-align: right;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#summary .split .body h1 {
+    font-size: 40pt;
+    width: 100%;
+    margin: 0.3em 0;
+}
+
+#summary .split .body .tp_school {
+    color: #FFDD85;
+}
+
+#summary .split .body .tp_study {
+    color: #BFCDFF;
+}
+
+#summary .split .body .tp_interest {
+    color: #BFFFC6;
+}
+
+#summary .details {
+    display: flex;
+    color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 14pt;
+}
+
+#summary .details #school {
+    margin: 2em 2em;
+}
+
+#summary .details #study {
+    margin: 3em 2em 1em 2em;
+}
+
+#summary .details #interests {
+    margin: 1em 2em 3em 2em;
+}
+
+#summary .details h2 {
+    margin: 0;
+    padding: 5px 0;
+    margin: 0 1.5em;
+    width: min-content;
+    position: relative;
+    z-index: 2;
+}
+
+#summary .details h2::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 140%;
+    top: 0;
+    left: -20%;
+    transform: skewX(12deg);
+    z-index: -1;
+    background-color: inherit;
+}
+
+#summary .details #school h2 {
+    background-color: #FFDD85;
+}
+
+#summary .details #study h2 {
+    background-color: #BFCDFF;
+}
+
+#summary .details #interests h2 {
+    background-color: #BFFFC6;
+}
+
+#summary .details ul {
+    background-color: #A2A2B4;
+    margin-top: -1em;
+    padding: 1.5em 1em 1em 40px;
 }

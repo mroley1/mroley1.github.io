@@ -6,6 +6,9 @@
         <link rel="icon" href="./assets/favicon.ico">
         <link rel="stylesheet" href="./styles.css">
         <script defer src="./main.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -16,9 +19,61 @@
             <a href="#projects">Projects</a>
             <a href="https://resume.mroley.dev/" target="_blank" class="external">Resume</a>
         </nav>
-        <section id="summary"></section>
-        <section id="experience"></section>
-        <section id="skills"></section>
-        <section id="projects"></section>
+        <main>
+            <section id="summary">
+                <div class="split">
+                    <div class="image">
+                        <picture>
+                            <source srcset="./assets/Oley_Matthew_profile.webp" type="image/webp">
+                            <source srcset="./assets/Oley_Matthew_profile.png" type="image/png">
+                            <img src="./assets/Oley_Matthew_profile.png" class="circle_picture">
+                        </picture>
+                        <img class="vector" aria-hidden="true" src="/assets/vec_A.svg">
+                        <img class="vector" aria-hidden="true" src="/assets/vec_B.svg">
+                        <img class="vector" aria-hidden="true" src="/assets/vec_C.svg">
+                    </div>
+                    <div class="body">
+                        <h1>Matthew Oley</h1>
+                        <span>I am an <span class="tp_school">honors</span> student at the
+                        <span class="tp_school">Rochester Institute of Technology</span>.
+                        Majoring in <span class="tp_study">Software Engineering</span>
+                        with a minor in <span class="tp_study">Web Development</span>
+                        and an immersion in <span class="tp_interest">Photography
+                        and Imaging Sciences</span></span>
+                    </div>
+                </div>
+                <div class="details">
+                    <section id="school">
+                        <h2>School</h2>
+                        <ul>
+                            <li>Rochester Institute of Technology</li>
+                            <li>RIT Honors</li>
+                            <li>Dean's List</li>
+                            <li>3.61 GPA</li>
+                            <li>Performing Arts Scholor</li>
+                        </ul>
+                    </section>
+                    <section id="study">
+                        <h2>Study</h2>
+                        <ul>
+                            <li>Software Engineering Bachelor of Science</li>
+                            <li>Web Development Minor</li>
+                        </ul>
+                    </section>
+                    <section id="interests">
+                        <h2>Interests</h2>
+                        <ul>
+                            <li>Singing</li>
+                            <li>Musical Theatre</li>
+                            <li>Sign Language (ASL)</li>
+                            <li>Hiking</li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+            <section id="experience"></section>
+            <section id="skills"></section>
+            <section id="projects"></section>
+        </main>
     </body>
 </html>
