@@ -207,8 +207,8 @@ a.external:hover::after {
 #experience ol {
     display: inline-block;
     position: relative;
-    width: max-content;
     padding-inline-start: 4em;
+    margin: 1em;
 }
 
 #experience ol > li::before {
