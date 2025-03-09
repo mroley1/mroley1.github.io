@@ -5,6 +5,9 @@ body {
     font-family: "Inika", serif;
     margin: 0;
 }
+h1 {
+    font-size: 45pt;
+}
 
 .navbar {
     position: static;
@@ -201,33 +204,11 @@ a.external:hover::after {
     overflow: hidden;
 }
 
-#experience h1 {
-    font-size: 40pt;
-}
-
-#experience .columns {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-}
-
-#experience .columns ol {
+#experience ol {
     display: inline-block;
     position: relative;
+    width: max-content;
     padding-inline-start: 4em;
-}
-
-#experience .columns .right {
-    position: relative;
-    text-align: right;
-}
-
-#experience .columns .right img {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    aspect-ratio: 0.333;
-    max-width: 100%;
-    height: 100%;
 }
 
 #experience ol > li::before {
@@ -293,9 +274,95 @@ a.external:hover::after {
     font-size: 25pt
 }
 
-#experience ol > li > details summary span {
+#experience ol > li > details summary span.subtitle {
     font-size: 15pt;
     display: inline-block;
     margin: 0 0 8px 0;
     color: #c4c3d3;
+}
+
+#projects h1 {
+    text-align: center;
+}
+
+#projects > ol {
+    text-align: center;
+}
+
+#projects > ol > li::marker {
+    content: none;
+}
+
+#projects > ol > li {
+    text-align: start;
+    display: inline-block;
+    width: 80%;
+    background-color: #2D2C38;
+    position: relative;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, -2em 100%, -2em 20px, 0 20px);
+}
+
+#projects > ol > li > img {
+    width: 8em;
+    height: 8em;
+    display: inline;
+    float: left;
+    margin: 1em;
+    border: solid rgb(145, 145, 145) 3px;
+}
+
+#projects > ol > li > h2 {
+    margin: 0.3em 0 0 0;
+    font-size: 30pt;
+}
+
+#projects > ol > li > span {
+    font-size: 15pt;
+}
+
+#projects > ol > li .links {
+    position: absolute;
+    left: -1.5em;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0;
+}
+
+#projects > ol > li .links > a {
+    width: 3em;
+    height: 3em;
+    margin: 0.3em 0;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    background-color: #222233;
+    border-radius: 100%;
+    transition: background-color 0.2s linear;
+    border: solid white 1px;
+    box-sizing: border-box;
+}
+
+#projects > ol > li .links > a.github {
+    background-image: url("assets/github_icon.svg");
+}
+
+#projects > ol > li .links > a.github:hover {
+    background-color: #5a33a5;
+}
+
+#projects > ol > li .links > a.website {
+    background-image: url("assets/website_icon.svg");
+}
+
+#projects > ol > li .links > a.website:hover {
+    background-color: #333ea5;
+}
+
+footer {
+    text-align: center;
+    font-size: 15pt;
+    margin: 12px 0;
 }
