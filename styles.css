@@ -225,6 +225,7 @@ a.external:hover::after {
 
 #experience ol > li {
     text-align: start;
+    font-size: 12pt;
 }
 
 #experience ol > li details{
